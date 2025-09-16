@@ -86,7 +86,10 @@ else
                     // input character description
                     Console.WriteLine("Enter description:");
                     string? Description = Console.ReadLine();
-                    Console.WriteLine($"{Id}, {Name}, {Description}");
+                    // input character species
+                    Console.WriteLine("Enter species:");
+                    string? Specie = Console.ReadLine();
+                    Console.WriteLine($"{Id}, {Name}, {Description}, {Species}");
                 }
             } else {
                 logger.Error("You must enter a name");
