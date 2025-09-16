@@ -1,2 +1,6 @@
+.vscode
+bin
 obj
 *.sln
+Properties
+appsettings.json
