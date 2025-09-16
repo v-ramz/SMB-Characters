@@ -89,7 +89,10 @@ else
                     // input character species
                     Console.WriteLine("Enter species:");
                     string? Specie = Console.ReadLine();
-                    Console.WriteLine($"{Id}, {Name}, {Description}, {Species}");
+                    // input character first appearance
+                    Console.WriteLine("Enter first appearance:");
+                    string? FirstAppearance = Console.ReadLine();
+                    Console.WriteLine($"{Id}, {Name}, {Description}, {Specie}, {FirstAppearance}");
                 }
             } else {
                 logger.Error("You must enter a name");
