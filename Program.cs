@@ -18,9 +18,9 @@ else
     // lists are used since we do not know number of lines of data
     List<UInt64> Ids = [];
     List<string> Names = [];
-    List<string> Descriptions = [];
-    List<string> Species = [];
-    List<string> FirstAppearances = [];
+    List<string?> Descriptions = [];
+    List<string?> Species = [];
+    List<string?> FirstAppearances = [];
     List<UInt64> YearsCreated = [];
     // to populate the lists with data, read from the data file
     try
@@ -94,8 +94,22 @@ else
                     string? FirstAppearance = Console.ReadLine();
                     // input character year created
                     Console.WriteLine("Enter year created:");
-                    string? YearCreated = Console.ReadLine();
-                    Console.WriteLine($"{Id}, {Name}, {Description}, {Specie}, {FirstAppearance}, {YearCreated}");
+                    UInt64 YearCreated = UInt64.Parse(Console.ReadLine());
+
+                    // Console.WriteLine($"{Id}, {Name}, {Description}, {Specie}, {FirstAppearance}, {YearCreated}");
+                    // create file from data
+                    StreamWriter sw = new(file, true);
+                    sw.WriteLine($"{Id},{Name},{Description}, {Specie}, {FirstAppearance}, {YearCreated}");
+                    sw.Close();
+                    // add new character details to Lists
+                    Ids.Add(Id);
+                    Names.Add(Name);
+                    Descriptions.Add(Description);
+                    Species.Add(Specie);
+                    FirstAppearances.Add(FirstAppearance);
+                    YearsCreated.Add(YearCreated);
+                    // log transaction
+                    logger.Info($"Character id {Id} added");
                 }
             } else {
                 logger.Error("You must enter a name");
