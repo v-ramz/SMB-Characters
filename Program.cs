@@ -127,7 +127,7 @@ else
                 Console.WriteLine($"Description: {Descriptions[i]}");
                 Console.WriteLine($"Species: {Species[i]}");
                 Console.WriteLine($"First-Appearance: {FirstAppearances[i]}");
-                Console.WriteLine($"Year Created: {YearsCreated[i]}");
+                Console.WriteLine($"Year-Created: {YearsCreated[i]}");
                 Console.WriteLine();
             }
         }
