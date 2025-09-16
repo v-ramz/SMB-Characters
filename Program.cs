@@ -92,7 +92,10 @@ else
                     // input character first appearance
                     Console.WriteLine("Enter first appearance:");
                     string? FirstAppearance = Console.ReadLine();
-                    Console.WriteLine($"{Id}, {Name}, {Description}, {Specie}, {FirstAppearance}");
+                    // input character year created
+                    Console.WriteLine("Enter year created:");
+                    string? YearCreated = Console.ReadLine();
+                    Console.WriteLine($"{Id}, {Name}, {Description}, {Specie}, {FirstAppearance}, {YearCreated}");
                 }
             } else {
                 logger.Error("You must enter a name");
