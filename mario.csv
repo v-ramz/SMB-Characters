@@ -13,4 +13,8 @@ id,name,description,species,first-appearance,year-created
 12,Donkey Kong,King of the jungle,Kong,Donkey Kong,1981
 13,Diddy Kong,Donkey Kong's trusted friend,Kong,Donkey Kong Country,1994
 14,Bill Nai, Scientist, Human, 1981, 1949
+<<<<<<< HEAD
+
+=======
 15,Bob,Mario's Friend,Human,Unkown,2025
+>>>>>>> classesAndObjects

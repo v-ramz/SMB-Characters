@@ -71,7 +71,8 @@ else
             Character character = new();
             Console.WriteLine("Enter new character name: ");
             character.Names = Console.ReadLine() ?? string.Empty;
-            if (!string.IsNullOrEmpty(character.Names)){
+            if (!string.IsNullOrEmpty(character.Names))
+            {
                 // check for duplicate name
                 List<string> LowerCaseNames = characters.ConvertAll(character => character.Names.ToLower());
                 if (LowerCaseNames.Contains(character.Names.ToLower()))
@@ -84,16 +85,16 @@ else
                     character.Ids = characters.Max(character => character.Ids) + 1;
                     // input character description
                     Console.WriteLine("Enter description:");
-                    character.Descriptions = Console.ReadLine() ??string.Empty;
+                    character.Descriptions = Console.ReadLine() ?? string.Empty;
                     // input character species
                     Console.WriteLine("Enter species:");
-                    character.Species = Console.ReadLine() ??string.Empty;
+                    character.Species = Console.ReadLine() ?? string.Empty;
                     // input character first appearance
                     Console.WriteLine("Enter first appearance:");
-                    character.FirstAppearances = Console.ReadLine() ??string.Empty;
+                    character.FirstAppearances = Console.ReadLine() ?? string.Empty;
                     // input character year created
                     Console.WriteLine("Enter year created:");
-                    character.YearsCreated = UInt64.Parse(Console.ReadLine() ??string.Empty);
+                    character.YearsCreated = UInt64.Parse(Console.ReadLine() ?? string.Empty);
 
                     // Console.WriteLine($"{Id}, {Name}, {Description}, {Specie}, {FirstAppearance}, {YearCreated}");
                     // create file from data
@@ -105,26 +106,22 @@ else
                     // log transaction
                     logger.Info($"Character id {character.Ids} added");
                 }
-            } else {
+            }
+            else
+            {
                 logger.Error("You must enter a name");
             }
         }
-    //     else if (choice == "2")
-    //     {
-    //         // Display All Characters
-    //         // loop thru Lists
-    //         for (int i = 0; i < Ids.Count; i++)
-    //         {
-    //             // display character details
-    //             Console.WriteLine($"Id: {Ids[i]}");
-    //             Console.WriteLine($"Name: {Names[i]}");
-    //             Console.WriteLine($"Description: {Descriptions[i]}");
-    //             Console.WriteLine($"Species: {Species[i]}");
-    //             Console.WriteLine($"First-Appearance: {FirstAppearances[i]}");
-    //             Console.WriteLine($"Year-Created: {YearsCreated[i]}");
-    //             Console.WriteLine();
-    //         }
-    //     }
+        else if (choice == "2")
+        {
+            // Display All Characters
+            // loop thru Lists
+            foreach (Character character in characters)
+            {
+                Console.WriteLine(character.Display());
+            }
+
+        }
     } while (choice == "1" || choice == "2");
 }
 

@@ -9,3 +9,8 @@
 2025-09-29 23:39:44.8896|INFO|SMB Characters.Program|User choice: 2
 2025-09-29 23:40:17.6257|INFO|SMB Characters.Program|User choice: 1
 2025-09-29 23:40:43.1190|INFO|SMB Characters.Program|Character id 15 added
+<<<<<<< HEAD
+2025-09-29 23:45:02.6378|INFO|SMB Characters.Program|Program started
+2025-09-29 23:45:05.2238|INFO|SMB Characters.Program|User choice: 2
+=======
+>>>>>>> classesAndObjects
